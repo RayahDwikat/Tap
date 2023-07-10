@@ -1,10 +1,10 @@
 var Duplicate = function(nums) {
-    let data = new Set();
-    for (let x of nums) {
-        if (data.has(x)) {
-            return true;
+    for (let i = 0; i < nums.length; ++ i) {
+        for (let j = 0; j < i; ++ j) {
+            if (nums[i] == nums[j]) {
+                return true;
+            }
         }
-        data.add(x);
     }
     return false;
 };
